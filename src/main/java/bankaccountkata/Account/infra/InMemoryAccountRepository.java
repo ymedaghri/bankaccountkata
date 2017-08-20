@@ -15,16 +15,14 @@ public class InMemoryAccountRepository implements AccountRepository {
 
 
     @Override
-    public Account findAccountByID(AccountId accountId)
-    {
+    public Account findAccountByID(AccountId accountId) {
         return accounts.stream().filter(account -> account.accountId().equals(accountId)).findFirst().orElse(null);
     }
 
 
     @Override
-    public Account save(Account account)
-    {
-        if(accounts.contains(account)) accounts.remove(account);
+    public Account save(Account account) {
+        if (accounts.contains(account)) accounts.remove(account);
         accounts.add(account);
         return account;
     }
@@ -35,5 +33,6 @@ public class InMemoryAccountRepository implements AccountRepository {
         storedAccount.setOperations(account.getOperations());
         return storedAccount;
     }
+
 
 }
