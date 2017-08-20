@@ -8,4 +8,6 @@ public interface AccountRepository {
     Account findAccountByID(AccountId accountId);
 
     Account save(Account account);
+
+    Account update(Account account);
 }

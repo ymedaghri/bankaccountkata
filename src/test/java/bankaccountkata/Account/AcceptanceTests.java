@@ -3,11 +3,16 @@ package bankaccountkata.Account;
 import bankaccountkata.Account.domain.Account;
 import bankaccountkata.Account.domain.AccountId;
 import bankaccountkata.Account.domain.AccountRepository;
+import bankaccountkata.Account.domain.Operation;
 import bankaccountkata.Account.infra.InMemoryAccountRepository;
 import org.hamcrest.core.Is;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+import org.mockito.InOrder;
+import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
@@ -30,4 +35,8 @@ public class AcceptanceTests {
         Account accountFound = accountRepository.findAccountByID(AccountId.from(ACCOUNT_ID));
         assertThat(accountFound, Is.is(account));
     }
+
+
+    
+
 }

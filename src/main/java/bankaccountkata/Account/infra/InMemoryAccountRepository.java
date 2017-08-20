@@ -29,4 +29,11 @@ public class InMemoryAccountRepository implements AccountRepository {
         return account;
     }
 
+    @Override
+    public Account update(final Account account) {
+        Account storedAccount = findAccountByID(account.accountId());
+        storedAccount.setOperations(account.getOperations());
+        return storedAccount;
+    }
+
 }
