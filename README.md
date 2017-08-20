@@ -12,7 +12,7 @@ Think of your personal bank account experience When in doubt, go for the simples
 * Statement printing
   
 
-#### User Stories
+### User Stories
 
 US 1:
 
