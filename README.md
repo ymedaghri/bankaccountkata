@@ -5,14 +5,14 @@ Source code for the bank account kata.
 
 Think of your personal bank account experience When in doubt, go for the simplest solution.
 
-###Requirements
+### Requirements
 
 * Deposit and Withdrawal
 * Account statement (date, amount, balance)
 * Statement printing
   
 
-####User Stories
+#### User Stories
 
 US 1:
 
