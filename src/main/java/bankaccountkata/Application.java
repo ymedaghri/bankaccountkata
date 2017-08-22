@@ -1,3 +1,5 @@
+package bankaccountkata;
+
 import bankaccountkata.Account.domain.Account;
 import bankaccountkata.Account.domain.AccountId;
 import bankaccountkata.Account.domain.LanguageFormat;

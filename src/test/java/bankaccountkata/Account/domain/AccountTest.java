@@ -21,7 +21,7 @@ import static org.junit.Assert.assertThat;
 public class AccountTest {
 
     public static final Long ACCOUNT_ID = 123l;
-    public static final LocalDate January_01_2017 = LocalDate.of(2017, 01, 01);
+    public static final LocalDate January_01_2017 = LocalDate.of(2017, 1, 1);
 
     @Mock
     private OperationDateGenerator dateGenerator;

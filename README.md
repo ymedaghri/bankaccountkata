@@ -1,6 +1,14 @@
 # BankAccountKata
 Source code for the bank account kata.
 
+## How to build and run
+This is a Java gradle project, you can build it, test it, and package it using the gradle conventions.
+
+```
+gradle jar
+java -jar build/libs/bankaccount-1.0-SNAPSHOT.jar
+```
+
 ## Project Description
 
 Think of your personal bank account experience When in doubt, go for the simplest solution.
