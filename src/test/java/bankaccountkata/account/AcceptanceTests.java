@@ -1,9 +1,9 @@
-package bankaccountkata.Account;
+package bankaccountkata.account;
 
-import bankaccountkata.Account.domain.*;
-import bankaccountkata.Account.infra.Console;
-import bankaccountkata.Account.infra.InMemoryAccountRepository;
-import bankaccountkata.Account.infra.LanguageFormatter;
+import bankaccountkata.account.domain.*;
+import bankaccountkata.account.infra.Console;
+import bankaccountkata.account.infra.InMemoryAccountRepository;
+import bankaccountkata.account.infra.LanguageFormatter;
 import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.time.LocalDate;
 

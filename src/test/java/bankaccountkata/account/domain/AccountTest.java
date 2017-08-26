@@ -1,13 +1,13 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
-import bankaccountkata.Account.infra.InMemoryAccountRepository;
+import bankaccountkata.account.infra.InMemoryAccountRepository;
 import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.time.LocalDate;
 import java.util.List;

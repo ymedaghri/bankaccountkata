@@ -1,9 +1,9 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
 
 import java.time.LocalDate;
 
-import static bankaccountkata.Account.domain.Operation.OperationType.DEPOSIT;
+import static bankaccountkata.account.domain.Operation.OperationType.DEPOSIT;
 
 /**
  * Created by ymedaghri on 18/08/2017.

@@ -1,4 +1,4 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
 /**
  * Created by medaghrialaouiyoussef on 20/08/2017.

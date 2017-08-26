@@ -1,4 +1,4 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
 /**
  * Created by medaghrialaouiyoussef on 20/08/2017.
@@ -11,6 +11,10 @@ public class AccountId {
     private AccountId(final Long accountId) {
 
         this.accountId = accountId;
+    }
+
+    public Long getId() {
+        return accountId;
     }
 
     public static AccountId from(final Long accountId) {

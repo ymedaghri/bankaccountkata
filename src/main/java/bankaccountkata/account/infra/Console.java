@@ -1,7 +1,7 @@
-package bankaccountkata.Account.infra;
+package bankaccountkata.account.infra;
 
 
-import bankaccountkata.Account.domain.AccountHistoryPrinter;
+import bankaccountkata.account.domain.AccountHistoryPrinter;
 
 /**
  * Created by ymedaghri on 18/08/2017.

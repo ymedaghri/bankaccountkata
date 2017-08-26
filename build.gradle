@@ -1,31 +1,35 @@
-group 'com.ymedaghri.kata.bankaccount'
-version '1.0-SNAPSHOT'
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '3.3'
-  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
 }
 
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
 
+version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-jar {
-    manifest {
-        attributes("Implementation-Title": project.name,
-            "Implementation-Version": version,
-            "Main-Class": 'bankaccountkata.Application')
-    }
+repositories {
+	mavenCentral()
 }
 
-repositories {
-    mavenCentral()
-}
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile "org.mockito:mockito-core:2.+"
+	//compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('com.jayway.jsonpath:json-path:1.2.0')
+	testCompile group: "de.flapdoodle.embed", name: "de.flapdoodle.embed.mongo", version: "2.0.0"
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile "org.mockito:mockito-core:2.+"
 }
-
-
-

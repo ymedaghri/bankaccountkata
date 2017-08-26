@@ -1,4 +1,4 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,15 +10,14 @@ import java.util.concurrent.atomic.DoubleAdder;
  */
 public class Account {
 
-    private OperationDateGenerator operationDateGenerator;
     private AccountId accountId;
-
     List<Operation> operations = new ArrayList<>();
+    private OperationDateGenerator operationDateGenerator;
 
     public Account(final AccountId accountId) {
 
         this.accountId = accountId;
-        operationDateGenerator=new OperationDateGenerator() {
+        operationDateGenerator = new OperationDateGenerator() {
             @Override
             public LocalDate now() {
                 return LocalDate.now();
@@ -26,14 +25,13 @@ public class Account {
         };
     }
 
+    public Account(){
+
+    }
     public Account(final AccountId accountId, OperationDateGenerator operationDateGenerator) {
 
         this.accountId = accountId;
-        this.operationDateGenerator=operationDateGenerator;
-    }
-
-    public AccountId accountId() {
-        return accountId;
+        this.operationDateGenerator = operationDateGenerator;
     }
 
 
@@ -54,11 +52,10 @@ public class Account {
         operations.add(new Withdrawal(amount, operationDateGenerator.now()));
     }
 
-    public void printHistoryTo(AccountHistoryPrinter printer, OperationFormater formater)
-    {
-        DoubleAdder doubleAdder=new DoubleAdder();
+    public void printHistoryTo(AccountHistoryPrinter printer, OperationFormater formater) {
+        DoubleAdder doubleAdder = new DoubleAdder();
         operations.forEach(operation -> {
-            doubleAdder.add(operation.amount()*operation.amountDirection());
+            doubleAdder.add(operation.amount() * operation.amountDirection());
             printer.printLine(formater.format(operation, doubleAdder.doubleValue()));
         });
     }
@@ -70,11 +67,21 @@ public class Account {
 
         final Account account = (Account) o;
 
-        return accountId != null ? accountId.equals(account.accountId) : account.accountId == null;
+        if (operationDateGenerator != null ? !operationDateGenerator.equals(account.operationDateGenerator) : account.operationDateGenerator != null)
+            return false;
+        if (accountId != null ? !accountId.equals(account.accountId) : account.accountId != null) return false;
+        return operations != null ? operations.equals(account.operations) : account.operations == null;
     }
 
     @Override
     public int hashCode() {
-        return accountId != null ? accountId.hashCode() : 0;
+        int result = operationDateGenerator != null ? operationDateGenerator.hashCode() : 0;
+        result = 31 * result + (accountId != null ? accountId.hashCode() : 0);
+        result = 31 * result + (operations != null ? operations.hashCode() : 0);
+        return result;
+    }
+
+    public AccountId getAccountId() {
+        return accountId;
     }
 }

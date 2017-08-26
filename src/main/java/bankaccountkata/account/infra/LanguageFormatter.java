@@ -1,8 +1,8 @@
-package bankaccountkata.Account.infra;
+package bankaccountkata.account.infra;
 
-import bankaccountkata.Account.domain.LanguageFormat;
-import bankaccountkata.Account.domain.Operation;
-import bankaccountkata.Account.domain.OperationFormater;
+import bankaccountkata.account.domain.LanguageFormat;
+import bankaccountkata.account.domain.Operation;
+import bankaccountkata.account.domain.OperationFormater;
 
 
 /**
