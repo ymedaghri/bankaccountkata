@@ -39,9 +39,10 @@ public class AccountControllerTest extends BankaccountApplicationTests {
         assertThat(response_2.getStatusCode(), Is.is(HttpStatus.OK));
         assertThat(response_2.getBody().getAccountId(), Is.is(345678l));
 
-        ResponseEntity<AccountJson[]> response = allAccounts();
+        ResponseEntity<AccountsJson> response = allAccounts();
         assertThat(response.getStatusCode(), Is.is(HttpStatus.OK));
-        Assertions.assertThat(asList(response.getBody())).containsExactlyInAnyOrder(new AccountJson(123456l), new AccountJson(345678l));
+        List<AccountJson> accounts = response.getBody().getAccounts();
+        Assertions.assertThat(accounts).containsExactlyInAnyOrder(new AccountJson(123456l), new AccountJson(345678l));
     }
 
     @Test
@@ -60,8 +61,8 @@ public class AccountControllerTest extends BankaccountApplicationTests {
         Assertions.assertThat(response.getBody().getAccountId()).isEqualTo(785647l);
     }
 
-    private ResponseEntity<AccountJson[]> allAccounts() {
-        return restTemplate.getForEntity("/accounts", AccountJson[].class);
+    private ResponseEntity<AccountsJson> allAccounts() {
+        return restTemplate.getForEntity("/accounts", AccountsJson.class);
     }
 
 

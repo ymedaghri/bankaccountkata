@@ -1,0 +1,29 @@
+<md-dialog aria-label="Create a new account">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Account Creation</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <p style="color: red">{{errorMessage}}</p>
+
+        <md-card-content>
+            <div layout="row">
+                <md-input-container>
+                    <label>Account Id</label>
+                    <input ng-model="account.id" name="accountId">
+                </md-input-container>
+            </div>
+            <div layout="row" layout-align="end" flex>
+                <md-button ng-click="addAccount(account.id);" class="md-primary">Save</md-button>
+            </div>
+        </md-card-content>
+        </div>
+    </md-dialog-content>
+</md-dialog>

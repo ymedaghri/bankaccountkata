@@ -26,9 +26,9 @@ public class AccountController {
     AccountRepository accountRepository;
 
     @GetMapping(path = "/accounts")
-    public List<AccountJson> getAccounts() {
-        return accountRepository.findAll().stream().map(
-                account -> AccountJson.fromModel(account)).collect(Collectors.toList());
+    public AccountsJson getAccounts() {
+        return new AccountsJson(accountRepository.findAll().stream().map(
+                account -> AccountJson.fromModel(account)).collect(Collectors.toList()));
     }
 
     @RequestMapping(value = "/account/{accountId}", method = GET)
