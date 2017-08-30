@@ -1,11 +1,11 @@
 package bankaccountkata;
 
-import bankaccountkata.Account.domain.Account;
-import bankaccountkata.Account.domain.AccountId;
-import bankaccountkata.Account.domain.LanguageFormat;
-import bankaccountkata.Account.domain.OperationFormater;
-import bankaccountkata.Account.infra.Console;
-import bankaccountkata.Account.infra.LanguageFormatter;
+import bankaccountkata.account.domain.Account;
+import bankaccountkata.account.domain.AccountId;
+import bankaccountkata.account.domain.LanguageFormat;
+import bankaccountkata.account.domain.OperationFormater;
+import bankaccountkata.account.infra.Console;
+import bankaccountkata.account.infra.LanguageFormatter;
 
 /**
  * Created by medaghrialaouiyoussef on 20/08/2017.

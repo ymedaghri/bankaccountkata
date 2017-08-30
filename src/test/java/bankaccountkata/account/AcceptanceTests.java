@@ -1,9 +1,9 @@
-package bankaccountkata.Account;
+package bankaccountkata.account;
 
-import bankaccountkata.Account.domain.*;
-import bankaccountkata.Account.infra.Console;
-import bankaccountkata.Account.infra.InMemoryAccountRepository;
-import bankaccountkata.Account.infra.LanguageFormatter;
+import bankaccountkata.account.domain.*;
+import bankaccountkata.account.infra.Console;
+import bankaccountkata.account.infra.InMemoryAccountRepository;
+import bankaccountkata.account.infra.LanguageFormatter;
 import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;

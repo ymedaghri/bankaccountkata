@@ -1,4 +1,4 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

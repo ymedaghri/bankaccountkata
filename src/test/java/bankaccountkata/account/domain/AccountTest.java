@@ -1,6 +1,6 @@
-package bankaccountkata.Account.domain;
+package bankaccountkata.account.domain;
 
-import bankaccountkata.Account.infra.InMemoryAccountRepository;
+import bankaccountkata.account.infra.InMemoryAccountRepository;
 import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;

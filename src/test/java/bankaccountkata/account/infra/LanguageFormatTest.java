@@ -1,6 +1,6 @@
-package bankaccountkata.Account.infra;
+package bankaccountkata.account.infra;
 
-import bankaccountkata.Account.domain.LanguageFormat;
+import bankaccountkata.account.domain.LanguageFormat;
 import org.hamcrest.core.Is;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,8 +1,8 @@
-package bankaccountkata.Account.infra;
+package bankaccountkata.account.infra;
 
-import bankaccountkata.Account.domain.Account;
-import bankaccountkata.Account.domain.AccountId;
-import bankaccountkata.Account.domain.AccountRepository;
+import bankaccountkata.account.domain.Account;
+import bankaccountkata.account.domain.AccountId;
+import bankaccountkata.account.domain.AccountRepository;
 
 import java.util.HashSet;
 import java.util.Set;
